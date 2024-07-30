@@ -1,5 +1,5 @@
 ## Hi there 👋
-![Header]("C:\Users\FA0555TX\Downloads\github-header-image.png")<h1 align="center">Hi 👋, I'm Dev Bhardwaj</h1>
+![Header]("./github-header-image.png")<h1 align="center">Hi 👋, I'm Dev Bhardwaj</h1>
 <h3 align="center">BTech Student in Artificial Intelligence and Machine Learning from India</h3>
 <img align="right" alt="https://backiee.com/wallpaper/techsavvy-anime-programmers-haven/286745">
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=dbhardwaj21&label=Profile%20views&color=0e75b6&style=flat" alt="dbhardwaj21" /> </p>
