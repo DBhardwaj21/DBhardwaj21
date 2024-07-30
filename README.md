@@ -1,7 +1,7 @@
 ## Hi there 👋
 [![MasterHead](https://1.bp.blogspot.com/-7A4WynwLsM...)](https://rishavchanda.io)
 <h3 align="center">BTech Student in Artificial Intelligence and Machine Learning from India</h3>
-<img align="right" alt="[https://backiee.com/wallpaper/techsavvy-anime-programmers-haven/286745](https://backiee.com/static/wallpapers/1000x563/386745.jpg)">
+<img align="right" alt="https://github.com/DBhardwaj21/DBhardwaj21/blob/main/386745.jpg">
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=dbhardwaj21&label=Profile%20views&color=0e75b6&style=flat" alt="dbhardwaj21" /> </p>
 
 - 📫 How to reach me **dev.bhardwaj2103@gmail.com**
