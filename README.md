@@ -146,20 +146,23 @@ Modern job aggregation platform with AI-driven candidate profile matching and au
 
 <br/>
 
+<!-- Streak Stats Centered -->
+<div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=DBhardwaj21&theme=tokyonight&hide_border=true&border_radius=8" height="160" alt="GitHub Streak Stats" />
+</div>
+
+<br/>
+
+<!-- Stats & Languages Side-by-Side (Combined Width ~700px < 885px) -->
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=DBhardwaj21&theme=tokyonight&hide_border=true&border_radius=8" height="175" alt="GitHub Streak Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=DBhardwaj21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="160" alt="GitHub Stats" />
   &nbsp;
-  <img src="https://github-readme-stats.vercel.app/api?username=DBhardwaj21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="175" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DBhardwaj21&layout=compact&theme=tokyonight&hide_border=true&hide=html,css" height="160" alt="Top Languages" />
 </p>
 
 <br/>
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DBhardwaj21&layout=compact&theme=tokyonight&hide_border=true&hide=html,css" height="165" alt="Top Languages" />
-</p>
-
-<br/>
-
+<!-- Contribution Matrix -->
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td bgcolor="#0B1120" style="padding: 14px; border-radius: 10px; border: 1px solid #1E293B;" align="center">
