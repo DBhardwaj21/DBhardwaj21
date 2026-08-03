@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <rect width="400" height="250" rx="10" fill="#0B1120" stroke="#1E293B" stroke-width="1.5"/>
+  <rect width="400" height="30" rx="10" fill="#111827"/>
+  
+  <circle cx="15" cy="15" r="4" fill="#EF4444"/>
+  <circle cx="30" cy="15" r="4" fill="#F59E0B"/>
+  <circle cx="45" cy="15" r="4" fill="#10B981"/>
+  
+  <text x="65" y="19" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">zsh — nexus@dev</text>
+
+  <g transform="translate(20, 60)" font-family="'JetBrains Mono', monospace" font-size="12">
+    <text x="0" y="0" fill="#38BDF8">&gt; boot()</text>
+    <text x="0" y="24" fill="#94A3B8">Initializing DEV//NEXUS...</text>
+    <text x="0" y="48" fill="#94A3B8">Loading AI Modules........ <tspan fill="#34D399">[DONE]</tspan></text>
+    <text x="0" y="72" fill="#94A3B8">Loading GitHub Services... <tspan fill="#34D399">[DONE]</tspan></text>
+    
+    <text x="0" y="110" fill="#38BDF8">&gt; whoami</text>
+    <text x="0" y="134" fill="#F8FAFC">Dev Bhardwaj | AI Engineer</text>
+    <text x="0" y="158" fill="#22D3EE">"Building intelligent developer tools."</text>
+  </g>
+</svg>
