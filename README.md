@@ -11,28 +11,24 @@
 
 <br />
 
-<!-- Mission Control Section -->
-<table width="100%" border="0" fill="#0B1120">
+<!-- Mission Control Terminal Block -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td bgcolor="#0B1120" style="padding: 20px; border-radius: 12px; border: 1px solid #1E293B;">
-      <div align="left">
-        <p font-family="JetBrains Mono, monospace">
-          <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="22" height="22" align="absmiddle"/>
-          <b fill="#F8FAFC">&nbsp;MISSION_CONTROL // INITIALIZATION</b>
-        </p>
-        <pre font-family="JetBrains Mono, monospace" style="background-color: #111827; color: #F8FAFC; padding: 15px; border-radius: 8px; border: 1px solid #1E293B; line-height: 1.6;">
-<span style="color: #22D3EE;">&gt; boot()</span>
-Initializing DEV//NEXUS...
-Loading AI Modules....... <span style="color: #34D399;">Done</span>
-Loading GitHub Services.. <span style="color: #34D399;">Done</span>
-System Status............ <span style="color: #34D399; font-weight: bold;">ONLINE</span>
-
-<span style="color: #22D3EE;">&gt; whoami</span>
-Dev Bhardwaj | AI Engineer
-
-<span style="color: #22D3EE;">&gt; mission</span>
-Building intelligent developer tools that augment software engineers using LLMs, Agentic AI &amp; scalable backend architectures.
-        </pre>
+    <td bgcolor="#0B1120" style="padding: 16px; border-radius: 10px; border: 1px solid #1E293B;">
+      <div align="left" style="font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 13px; color: #F8FAFC;">
+        <span style="color: #22D3EE; font-weight: bold;">MISSION_CONTROL // INITIALIZATION</span>
+        <br/><br/>
+        <span style="color: #38BDF8;">&gt; boot()</span><br/>
+        Initializing DEV//NEXUS...<br/>
+        Loading AI Modules....... <span style="color: #34D399; font-weight: bold;">[DONE]</span><br/>
+        Loading GitHub Services.. <span style="color: #34D399; font-weight: bold;">[DONE]</span><br/>
+        Status................... <span style="color: #34D399; font-weight: bold;">ONLINE</span>
+        <br/><br/>
+        <span style="color: #38BDF8;">&gt; whoami</span><br/>
+        <b>Dev Bhardwaj</b> | AI Engineer
+        <br/><br/>
+        <span style="color: #38BDF8;">&gt; mission</span><br/>
+        Building intelligent developer tools that augment software engineers using LLMs &amp; Agentic AI.
       </div>
     </td>
   </tr>
@@ -40,45 +36,130 @@ Building intelligent developer tools that augment software engineers using LLMs,
 
 <br />
 
-<img src="divider.svg" width="100%" alt="Section Divider" />
-
-<br />
-
-<!-- Featured Projects Section -->
 <div align="center">
-  <img src="projects.svg" width="100%" alt="DEV//NEXUS Projects Showcase" />
+  <img src="divider.svg" width="100%" alt="Section Divider" />
 </div>
 
 <br />
 
-<img src="divider.svg" width="100%" alt="Section Divider" />
+<!-- Featured Projects (Native Markdown HTML Grid for 100% Responsiveness) -->
+<div align="center">
+  <h3>⚡ FEATURED_PROJECTS</h3>
+</div>
+
+<table width="100%" border="0" cellspacing="10" cellpadding="0">
+  <tr>
+    <!-- CARD 1: AI Code Review Agent -->
+    <td width="50%" valign="top" bgcolor="#111827" style="padding: 16px; border-radius: 10px; border: 1px solid #1E293B;">
+      <table width="100%" border="0">
+        <tr>
+          <td><b style="font-size: 15px; color: #F8FAFC;">🤖 AI Code Review Agent</b></td>
+          <td align="right"><span style="background-color: #064E3B; color: #34D399; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold;">● ACTIVE</span></td>
+        </tr>
+      </table>
+      <p style="font-size: 12px; color: #94A3B8; margin-top: 8px; margin-bottom: 12px; line-height: 1.4;">
+        Autonomous PR review system using LLMs &amp; GitHub Apps to perform static analysis, flag security bugs, and suggest optimizations.
+      </p>
+      <div>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">Python</span>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">FastAPI</span>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">GitHub Apps</span>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">OpenAI</span>
+      </div>
+      <br/>
+      <a href="https://github.com/DBhardwaj21" style="color: #38BDF8; font-size: 12px; font-weight: bold;">View Repository →</a>
+    </td>
+
+    <!-- CARD 2: Agentic RAG Engine -->
+    <td width="50%" valign="top" bgcolor="#111827" style="padding: 16px; border-radius: 10px; border: 1px solid #1E293B;">
+      <table width="100%" border="0">
+        <tr>
+          <td><b style="font-size: 15px; color: #F8FAFC;">🧠 Agentic RAG Engine</b></td>
+          <td align="right"><span style="background-color: #1E3A8A; color: #3B82F6; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold;">● RUNNING</span></td>
+        </tr>
+      </table>
+      <p style="font-size: 12px; color: #94A3B8; margin-top: 8px; margin-bottom: 12px; line-height: 1.4;">
+        Multi-agent Retrieval Augmented Generation workflow with vector search for deep semantic search across complex developer docs.
+      </p>
+      <div>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">LangChain</span>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">Ollama</span>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">Docker</span>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">ChromaDB</span>
+      </div>
+      <br/>
+      <a href="https://github.com/DBhardwaj21" style="color: #38BDF8; font-size: 12px; font-weight: bold;">View Repository →</a>
+    </td>
+  </tr>
+  <tr>
+    <!-- CARD 3: FaceAuth Recognition -->
+    <td width="50%" valign="top" bgcolor="#111827" style="padding: 16px; border-radius: 10px; border: 1px solid #1E293B;">
+      <table width="100%" border="0">
+        <tr>
+          <td><b style="font-size: 15px; color: #F8FAFC;">👁️ FaceAuth Recognition</b></td>
+          <td align="right"><span style="background-color: #3B0764; color: #A78BFA; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold;">● STABLE</span></td>
+        </tr>
+      </table>
+      <p style="font-size: 12px; color: #94A3B8; margin-top: 8px; margin-bottom: 12px; line-height: 1.4;">
+        High-precision facial authentication pipeline leveraging DeepFace, FaceNet embeddings, and anti-spoofing verification.
+      </p>
+      <div>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">DeepFace</span>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">FaceNet</span>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">OpenCV</span>
+      </div>
+      <br/>
+      <a href="https://github.com/DBhardwaj21" style="color: #38BDF8; font-size: 12px; font-weight: bold;">View Repository →</a>
+    </td>
+
+    <!-- CARD 4: JobNest Platform -->
+    <td width="50%" valign="top" bgcolor="#111827" style="padding: 16px; border-radius: 10px; border: 1px solid #1E293B;">
+      <table width="100%" border="0">
+        <tr>
+          <td><b style="font-size: 15px; color: #F8FAFC;">💼 JobNest Platform</b></td>
+          <td align="right"><span style="background-color: #78350F; color: #F59E0B; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: bold;">● PRODUCTION</span></td>
+        </tr>
+      </table>
+      <p style="font-size: 12px; color: #94A3B8; margin-top: 8px; margin-bottom: 12px; line-height: 1.4;">
+        Modern job aggregation platform with AI-driven candidate profile matching and automated application tracking analytics.
+      </p>
+      <div>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">React</span>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">Express</span>
+        <span style="background-color: #1E293B; color: #22D3EE; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">MongoDB</span>
+      </div>
+      <br/>
+      <a href="https://github.com/DBhardwaj21" style="color: #38BDF8; font-size: 12px; font-weight: bold;">View Repository →</a>
+    </td>
+  </tr>
+</table>
+
+<br />
+
+<div align="center">
+  <img src="divider.svg" width="100%" alt="Section Divider" />
+</div>
 
 <br />
 
 <!-- Workspace Analytics -->
 <div align="center">
-  <h3>⚡ WORKSPACE_ANALYTICS</h3>
+  <h3>📊 WORKSPACE_ANALYTICS</h3>
 
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td align="center" valign="middle">
-        <img height="180em" src="https://github-readme-stats.vercel.app/api?username=dbhardwaj21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&bg_color=0B1120&title_color=22D3EE&icon_color=3B82F6&text_color=94A3B8" alt="Dev's GitHub Stats" />
-      </td>
-      <td align="center" valign="middle">
-        <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=dbhardwaj21&layout=compact&theme=tokyonight&hide_border=true&bg_color=0B1120&title_color=22D3EE&text_color=94A3B8&hide=html,css" alt="Dev's Top Languages" />
-      </td>
-    </tr>
-  </table>
+  <p align="center">
+    <img src="https://github-readme-stats.vercel.app/api?username=DBhardwaj21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="175" alt="GitHub Stats" />
+    &nbsp;
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DBhardwaj21&layout=compact&theme=tokyonight&hide_border=true&hide=html,css" height="175" alt="Top Languages" />
+  </p>
 
   <br />
 
-  <!-- GitHub Streak -->
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=dbhardwaj21&theme=tokyonight&hide_border=true&background=0B1120&ring=22D3EE&fire=38BDF8&currStreakNum=F8FAFC" alt="Dev's GitHub Streak" width="90%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=DBhardwaj21&theme=tokyonight&hide_border=true" width="90%" alt="GitHub Streak" />
 </div>
 
 <br />
 
-<!-- Contribution Graph & Snake -->
+<!-- Contribution Matrix & Snake -->
 <div align="center">
   <h3>🐍 CONTRIBUTION_MATRIX</h3>
 
@@ -91,38 +172,39 @@ Building intelligent developer tools that augment software engineers using LLMs,
 
 <br />
 
-<img src="divider.svg" width="100%" alt="Section Divider" />
+<div align="center">
+  <img src="divider.svg" width="100%" alt="Section Divider" />
+</div>
 
 <br />
 
-<!-- Current Stack Section (Terminal Style) -->
-<table width="100%" border="0">
+<!-- Installed Modules / Stack -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td bgcolor="#0B1120" style="padding: 20px; border-radius: 12px; border: 1px solid #1E293B;">
-      <div align="left">
-        <p style="font-family: 'JetBrains Mono', monospace; color: #22D3EE; font-weight: bold; margin-bottom: 10px;">
-          🛠️ INSTALLED_MODULES // CURRENT STACK
-        </p>
-        <table width="100%" border="0" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #F8FAFC;">
+    <td bgcolor="#0B1120" style="padding: 16px; border-radius: 10px; border: 1px solid #1E293B;">
+      <div align="left" style="font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 13px;">
+        <span style="color: #22D3EE; font-weight: bold;">🛠️ INSTALLED_MODULES // CURRENT STACK</span>
+        <br/><br/>
+        <table width="100%" border="0" style="color: #F8FAFC; font-size: 13px;">
           <tr>
-            <td width="33%" style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>Python</b></td>
-            <td width="33%" style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>FastAPI</b></td>
-            <td width="33%" style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>LangChain</b></td>
+            <td width="33%" style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>Python</b></td>
+            <td width="33%" style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>FastAPI</b></td>
+            <td width="33%" style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>LangChain</b></td>
           </tr>
           <tr>
-            <td style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>OpenAI</b></td>
-            <td style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>Gemini</b></td>
-            <td style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>Docker</b></td>
+            <td style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>OpenAI</b></td>
+            <td style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>Gemini</b></td>
+            <td style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>Docker</b></td>
           </tr>
           <tr>
-            <td style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>GitHub Apps</b></td>
-            <td style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>MongoDB</b></td>
-            <td style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>PostgreSQL</b></td>
+            <td style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>GitHub Apps</b></td>
+            <td style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>MongoDB</b></td>
+            <td style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>PostgreSQL</b></td>
           </tr>
           <tr>
-            <td style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>React</b></td>
-            <td style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>PyTorch</b></td>
-            <td style="padding: 6px;"><span style="color: #34D399;">✓</span> <b>OpenCV</b></td>
+            <td style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>React</b></td>
+            <td style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>PyTorch</b></td>
+            <td style="padding: 4px;"><span style="color: #34D399;">✓</span> <b>OpenCV</b></td>
           </tr>
         </table>
       </div>
@@ -132,11 +214,13 @@ Building intelligent developer tools that augment software engineers using LLMs,
 
 <br />
 
-<img src="divider.svg" width="100%" alt="Section Divider" />
+<div align="center">
+  <img src="divider.svg" width="100%" alt="Section Divider" />
+</div>
 
 <br />
 
-<!-- Connect Section -->
+<!-- Connect -->
 <div align="center">
   <h3>📡 ESTABLISH_CONNECTION</h3>
 
@@ -165,7 +249,7 @@ Building intelligent developer tools that augment software engineers using LLMs,
 
 <br />
 
-<!-- Footer Section -->
+<!-- Footer -->
 <div align="center">
   <img src="footer.svg" width="100%" alt="DEV//NEXUS Footer Bar" />
 </div>

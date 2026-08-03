@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 290" width="100%" height="100%">
   <defs>
-    <!-- Background Gradients -->
-    <linearGradient id="bg-grad-light" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Background Gradient -->
+    <linearGradient id="bg-light" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="50%" stop-color="#F8FAFC"/>
       <stop offset="100%" stop-color="#EFF6FF"/>
     </linearGradient>
 
-    <!-- Accent Gradients -->
-    <linearGradient id="primary-glow-light" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Accent Gradient -->
+    <linearGradient id="accent-light" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0EA5E9"/>
       <stop offset="50%" stop-color="#2563EB"/>
       <stop offset="100%" stop-color="#7C3AED"/>
@@ -22,118 +22,115 @@
   </defs>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500;700;800&amp;display=swap');
+    .font-mono { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, "Liberation Mono", monospace; }
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    
+    .title { font-weight: 800; font-size: 34px; fill: #0F172A; letter-spacing: 2px; }
+    .subtitle { font-weight: 700; font-size: 13px; fill: #0EA5E9; letter-spacing: 2px; }
+    .tagline { font-size: 13.5px; fill: #475569; font-weight: 400; }
+    .status-lbl { font-size: 10.5px; fill: #64748B; font-weight: 700; letter-spacing: 1px; }
+    .badge-txt { font-size: 11px; fill: #334155; font-weight: 600; }
 
-    .title { font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 38px; fill: #0F172A; letter-spacing: 2px; }
-    .subtitle { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 16px; fill: #0EA5E9; letter-spacing: 3px; text-transform: uppercase; }
-    .tagline { font-family: 'Inter', sans-serif; font-size: 14px; fill: #475569; font-weight: 400; }
-    .status-title { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #64748B; font-weight: 700; letter-spacing: 1px; }
-
-    @keyframes circuit-run {
-      0% { stroke-dashoffset: 300; }
-      100% { stroke-dashoffset: 0; }
-    }
-    @keyframes float-node {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-6px); }
-    }
     @keyframes blink {
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
-
-    .circuit-line { stroke-dasharray: 10 150; stroke-dashoffset: 0; animation: circuit-run 4s linear infinite; }
-    .node-float-1 { animation: float-node 4s ease-in-out infinite; }
-    .cursor-blink { animation: blink 1s infinite; }
+    .blink-cursor { animation: blink 1s infinite; }
   </style>
 
-  <!-- Background Layer -->
-  <rect width="900" height="320" rx="16" fill="url(#bg-grad-light)" stroke="#E2E8F0" stroke-width="1.5"/>
-  <rect width="900" height="320" rx="16" fill="url(#grid-light)" opacity="0.9"/>
+  <!-- Container Box -->
+  <rect width="900" height="290" rx="14" fill="url(#bg-light)" stroke="#E2E8F0" stroke-width="1.5"/>
+  <rect width="900" height="290" rx="14" fill="url(#grid-light)" opacity="0.9"/>
 
-  <!-- Top Accent Border Line -->
-  <path d="M 0 16 C 0 7.163 7.163 0 16 0 L 884 0 C 892.837 0 900 7.163 900 16 L 900 4 L 0 4 Z" fill="url(#primary-glow-light)"/>
+  <!-- Top Border Accent -->
+  <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 886 0 C 893.73 0 900 6.27 900 14 L 900 4 L 0 4 Z" fill="url(#accent-light)"/>
 
-  <!-- Circuit Lines -->
-  <g stroke="#0EA5E9" stroke-width="1.5" fill="none" opacity="0.35">
-    <path d="M 50 280 L 180 280 L 220 240 L 380 240" class="circuit-line"/>
-    <path d="M 700 40 L 780 40 L 820 80 L 850 80" class="circuit-line"/>
-    <circle cx="380" cy="240" r="3" fill="#0EA5E9"/>
-    <circle cx="850" cy="80" r="3" fill="#0EA5E9"/>
-  </g>
-
-  <!-- Left Content -->
-  <g transform="translate(50, 48)">
+  <!-- Left Hero Content -->
+  <g transform="translate(45, 42)">
+    <!-- Subtitle Pill -->
     <g transform="translate(0, 0)">
-      <rect width="140" height="26" rx="6" fill="#E0F2FE" stroke="#BAE6FD" stroke-width="1"/>
-      <circle cx="14" cy="13" r="4" fill="#0EA5E9"/>
-      <text x="26" y="17" class="subtitle">AI ENGINEER</text>
+      <rect width="135" height="24" rx="5" fill="#E0F2FE" stroke="#BAE6FD" stroke-width="1"/>
+      <circle cx="12" cy="12" r="3.5" fill="#0EA5E9"/>
+      <text x="24" y="16" class="font-mono subtitle">AI ENGINEER</text>
     </g>
 
-    <text x="0" y="70" class="title">DEV<tspan fill="url(#primary-glow-light)">//</tspan>NEXUS</text>
-    <text x="0" y="98" class="tagline">Building Intelligent Developer Tools using LLMs &amp; Agentic AI</text>
+    <!-- Title -->
+    <text x="0" y="65" class="font-mono title">DEV<tspan fill="url(#accent-light)">//</tspan>NEXUS</text>
 
-    <g transform="translate(0, 125)">
-      <rect x="0" y="0" width="82" height="24" rx="12" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <!-- Tagline -->
+    <text x="0" y="92" class="font-sans tagline">Building Intelligent Developer Tools using LLMs &amp; Agentic AI</text>
+
+    <!-- Badges Row -->
+    <g transform="translate(0, 120)">
+      <!-- Python -->
+      <rect x="0" y="0" width="76" height="24" rx="6" fill="#F1F5F9" stroke="#CBD5E1"/>
       <circle cx="12" cy="12" r="3" fill="#0284C7"/>
-      <text x="22" y="16" font-family="'JetBrains Mono', monospace" font-size="11" fill="#334155">Python</text>
+      <text x="22" y="16" class="font-mono badge-txt">Python</text>
 
-      <rect x="90" y="0" width="82" height="24" rx="12" fill="#F1F5F9" stroke="#CBD5E1"/>
-      <circle cx="102" cy="12" r="3" fill="#059669"/>
-      <text x="112" y="16" font-family="'JetBrains Mono', monospace" font-size="11" fill="#334155">FastAPI</text>
+      <!-- FastAPI -->
+      <rect x="84" y="0" width="78" height="24" rx="6" fill="#F1F5F9" stroke="#CBD5E1"/>
+      <circle cx="96" cy="12" r="3" fill="#059669"/>
+      <text x="106" y="16" class="font-mono badge-txt">FastAPI</text>
 
-      <rect x="180" y="0" width="86" height="24" rx="12" fill="#F1F5F9" stroke="#CBD5E1"/>
-      <circle cx="192" cy="12" r="3" fill="#DC2626"/>
-      <text x="202" y="16" font-family="'JetBrains Mono', monospace" font-size="11" fill="#334155">PyTorch</text>
+      <!-- PyTorch -->
+      <rect x="170" y="0" width="82" height="24" rx="6" fill="#F1F5F9" stroke="#CBD5E1"/>
+      <circle cx="182" cy="12" r="3" fill="#DC2626"/>
+      <text x="192" y="16" class="font-mono badge-txt">PyTorch</text>
 
-      <rect x="274" y="0" width="96" height="24" rx="12" fill="#F1F5F9" stroke="#CBD5E1"/>
-      <circle cx="286" cy="12" r="3" fill="#7C3AED"/>
-      <text x="296" y="16" font-family="'JetBrains Mono', monospace" font-size="11" fill="#334155">LangChain</text>
+      <!-- LangChain -->
+      <rect x="260" y="0" width="92" height="24" rx="6" fill="#F1F5F9" stroke="#CBD5E1"/>
+      <circle cx="272" cy="12" r="3" fill="#7C3AED"/>
+      <text x="282" y="16" class="font-mono badge-txt">LangChain</text>
+    </g>
+
+    <!-- Status Subline -->
+    <g transform="translate(0, 182)">
+      <circle cx="5" cy="5" r="3.5" fill="#059669"/>
+      <text x="16" y="9" class="font-mono" font-size="11" fill="#475569">STATUS: <tspan fill="#059669" font-weight="700">ONLINE</tspan> | LOCATION: <tspan fill="#0F172A">INDIA</tspan></text>
     </g>
   </g>
 
-  <!-- Right Panel -->
-  <g transform="translate(560, 45)" class="node-float-1">
-    <rect width="290" height="225" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
-    <rect width="290" height="34" rx="12" fill="#F1F5F9" opacity="0.9"/>
+  <!-- Right Side Panel -->
+  <g transform="translate(540, 35)">
+    <rect width="315" height="220" rx="10" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="315" height="32" rx="10" fill="#F1F5F9" opacity="0.9"/>
 
-    <circle cx="20" cy="17" r="5" fill="#EF4444"/>
-    <circle cx="36" cy="17" r="5" fill="#F59E0B"/>
-    <circle cx="52" cy="17" r="5" fill="#10B981"/>
-    <text x="75" y="21" font-family="'JetBrains Mono', monospace" font-size="11" fill="#475569" font-weight="600">SYSTEM_CONTROL.sh</text>
+    <!-- Window buttons -->
+    <circle cx="18" cy="16" r="4.5" fill="#EF4444"/>
+    <circle cx="32" cy="16" r="4.5" fill="#F59E0B"/>
+    <circle cx="46" cy="16" r="4.5" fill="#10B981"/>
+    <text x="65" y="20" class="font-mono" font-size="11" fill="#475569" font-weight="600">SYSTEM_CONTROL.sh</text>
 
-    <g transform="translate(20, 52)">
-      <text x="0" y="15" class="status-title">AI SYSTEMS</text>
-      <rect x="130" y="4" width="120" height="14" rx="3" fill="#D1FAE5"/>
-      <rect x="130" y="4" width="100" height="14" rx="3" fill="#059669"/>
-      <text x="134" y="15" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FFFFFF" font-weight="700">100% ONLINE</text>
+    <!-- Item 1 -->
+    <g transform="translate(18, 48)">
+      <text x="0" y="14" class="font-mono status-lbl">AI SYSTEMS</text>
+      <rect x="145" y="2" width="135" height="16" rx="4" fill="#D1FAE5"/>
+      <rect x="145" y="2" width="135" height="16" rx="4" fill="#059669"/>
+      <text x="152" y="14" class="font-mono" font-size="9.5" fill="#FFFFFF" font-weight="700">100% ONLINE</text>
     </g>
 
-    <g transform="translate(20, 92)">
-      <text x="0" y="15" class="status-title">AGENTIC ENGINE</text>
-      <rect x="130" y="4" width="120" height="14" rx="3" fill="#DBEAFE"/>
-      <rect x="130" y="4" width="110" height="14" rx="3" fill="#2563EB"/>
-      <text x="134" y="15" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FFFFFF" font-weight="700">ACTIVE // RUNNING</text>
+    <!-- Item 2 -->
+    <g transform="translate(18, 86)">
+      <text x="0" y="14" class="font-mono status-lbl">AGENTIC ENGINE</text>
+      <rect x="145" y="2" width="135" height="16" rx="4" fill="#DBEAFE"/>
+      <rect x="145" y="2" width="135" height="16" rx="4" fill="#2563EB"/>
+      <text x="152" y="14" class="font-mono" font-size="9.5" fill="#FFFFFF" font-weight="700">ACTIVE // RUNNING</text>
     </g>
 
-    <g transform="translate(20, 132)">
-      <text x="0" y="15" class="status-title">API GATEWAY</text>
-      <rect x="130" y="4" width="120" height="14" rx="3" fill="#EDE9FE"/>
-      <rect x="130" y="4" width="105" height="14" rx="3" fill="#7C3AED"/>
-      <text x="134" y="15" font-family="'JetBrains Mono', monospace" font-size="9" fill="#FFFFFF" font-weight="700">FASTAPI DEPLOYED</text>
+    <!-- Item 3 -->
+    <g transform="translate(18, 124)">
+      <text x="0" y="14" class="font-mono status-lbl">API GATEWAY</text>
+      <rect x="145" y="2" width="135" height="16" rx="4" fill="#EDE9FE"/>
+      <rect x="145" y="2" width="135" height="16" rx="4" fill="#7C3AED"/>
+      <text x="152" y="14" class="font-mono" font-size="9.5" fill="#FFFFFF" font-weight="700">FASTAPI DEPLOYED</text>
     </g>
 
-    <g transform="translate(20, 175)">
-      <rect width="250" height="32" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
-      <text x="12" y="20" font-family="'JetBrains Mono', monospace" font-size="11" fill="#0284C7">&gt; nexus.deploy()</text>
-      <text x="130" y="20" font-family="'JetBrains Mono', monospace" font-size="11" fill="#059669">[SUCCESS]</text>
-      <rect x="205" y="10" width="7" height="13" fill="#0F172A" class="cursor-blink"/>
+    <!-- Command Box -->
+    <g transform="translate(18, 165)">
+      <rect width="279" height="34" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="12" y="21" class="font-mono" font-size="11" fill="#0284C7">&gt; nexus.deploy()</text>
+      <text x="145" y="21" class="font-mono" font-size="11" fill="#059669">[SUCCESS]</text>
+      <rect x="228" y="11" width="7" height="14" fill="#0F172A" class="blink-cursor"/>
     </g>
-  </g>
-
-  <!-- Bottom Status Line -->
-  <g transform="translate(50, 282)">
-    <circle cx="6" cy="6" r="4" fill="#059669"/>
-    <text x="18" y="10" font-family="'JetBrains Mono', monospace" font-size="11" fill="#475569">STATUS: <tspan fill="#059669" font-weight="700">ALL SYSTEMS OPERATIONAL</tspan> | LOCATION: <tspan fill="#0F172A">INDIA</tspan></text>
   </g>
 </svg>
