@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-stack" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <pattern id="grid-stack" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E293B" stroke-width="0.75" stroke-dasharray="2 2"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap');
+
+    .font-mono { font-family: 'Fira Code', monospace; }
+    .font-sans { font-family: 'Inter', sans-serif; }
+
+    .hdr-title { font-size: 14.5px; font-weight: 700; fill: #00F0FF; letter-spacing: 1.5px; }
+    .cat-hdr { font-size: 11px; font-weight: 700; }
+    .item-txt { font-size: 11px; fill: #94A3B8; font-weight: 500; }
+    .role-title { font-size: 13.5px; font-weight: 700; fill: #F8FAFC; }
+    .company { font-size: 12px; font-weight: 700; fill: #38BDF8; }
+    .date-txt { font-size: 10.5px; fill: #64748B; font-weight: 600; }
+    .exp-desc { font-size: 11px; fill: #94A3B8; font-weight: 400; line-height: 1.5; }
+  </style>
+
+  <!-- Container Box -->
+  <rect width="900" height="380" rx="14" fill="url(#bg-stack)" stroke="#1E293B" stroke-width="1.5"/>
+  <rect width="900" height="380" rx="14" fill="url(#grid-stack)" opacity="0.5"/>
+
+  <!-- ==================== LEFT COLUMN: TECH STACK ==================== -->
+  <g transform="translate(36, 28)">
+    <rect width="404" height="324" rx="10" fill="#0D1424" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Header -->
+    <text x="16" y="28" class="font-mono hdr-title">🛠️ TECH_STACK</text>
+    <line x1="16" y1="36" x2="388" y2="36" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Content Grid -->
+    <g transform="translate(16, 52)" class="font-mono">
+      <!-- AI / ML -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="12" class="cat-hdr" fill="#38BDF8">🧠 AI / ML</text>
+        <text x="0" y="30" class="item-txt">🔹 LangChain &nbsp;•&nbsp; OpenAI &nbsp;•&nbsp; Gemini</text>
+        <text x="0" y="46" class="item-txt">🔹 Ollama &nbsp;•&nbsp; ChromaDB</text>
+      </g>
+
+      <!-- BACKEND -->
+      <g transform="translate(0, 60)">
+        <text x="0" y="12" class="cat-hdr" fill="#34D399">⚙️ BACKEND</text>
+        <text x="0" y="30" class="item-txt">🔹 Python &nbsp;•&nbsp; FastAPI</text>
+        <text x="0" y="46" class="item-txt">🔹 Node.js &nbsp;•&nbsp; Express</text>
+      </g>
+
+      <!-- FRONTEND -->
+      <g transform="translate(0, 120)">
+        <text x="0" y="12" class="cat-hdr" fill="#F472B6">🎨 FRONTEND</text>
+        <text x="0" y="30" class="item-txt">🔹 React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Tailwind</text>
+      </g>
+
+      <!-- DATABASE -->
+      <g transform="translate(0, 166)">
+        <text x="0" y="12" class="cat-hdr" fill="#F59E0B">🗄️ DATABASE</text>
+        <text x="0" y="30" class="item-txt">🔹 MongoDB &nbsp;•&nbsp; PostgreSQL</text>
+      </g>
+
+      <!-- DEVOPS / TOOLS -->
+      <g transform="translate(0, 212)">
+        <text x="0" y="12" class="cat-hdr" fill="#A78BFA">🚀 DEVOPS / TOOLS</text>
+        <text x="0" y="30" class="item-txt">🔹 Docker &nbsp;•&nbsp; GitHub Actions &nbsp;•&nbsp; Linux</text>
+        <text x="0" y="46" class="item-txt">🔹 Nginx</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT COLUMN: WORK EXPERIENCE ==================== -->
+  <g transform="translate(460, 28)">
+    <rect width="404" height="324" rx="10" fill="#0D1424" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Header -->
+    <text x="16" y="28" class="font-mono hdr-title">💼 WORK_EXPERIENCE</text>
+    <line x1="16" y1="36" x2="388" y2="36" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Experience Items -->
+    <g transform="translate(20, 56)">
+      <!-- Item 1: Infosys -->
+      <g transform="translate(0, 0)">
+        <circle cx="0" cy="8" r="4" fill="#00F0FF"/>
+        <line x1="0" y1="18" x2="0" y2="105" stroke="#1E293B" stroke-width="2"/>
+
+        <g transform="translate(16, 0)">
+          <text x="0" y="10" class="font-sans role-title">Specialist Programmer</text>
+          <text x="350" y="10" text-anchor="end" class="font-mono date-txt">2024 – Present</text>
+          <text x="0" y="28" class="font-sans company">Infosys</text>
+
+          <text x="0" y="48" class="font-sans exp-desc">Working on AI-driven solutions, automation tools</text>
+          <text x="0" y="64" class="font-sans exp-desc">and enterprise grade applications.</text>
+        </g>
+      </g>
+
+      <!-- Item 2: Repairo Tech -->
+      <g transform="translate(0, 115)">
+        <circle cx="0" cy="8" r="4" fill="#3B82F6"/>
+
+        <g transform="translate(16, 0)">
+          <text x="0" y="10" class="font-sans role-title">AI/ML Intern</text>
+          <text x="350" y="10" text-anchor="end" class="font-mono date-txt">Jul 2024 – Aug 2024</text>
+          <text x="0" y="28" class="font-sans company">Repairo Tech</text>
+
+          <text x="0" y="48" class="font-sans exp-desc">Developed a prototype recommendation engine</text>
+          <text x="0" y="64" class="font-sans exp-desc">for repair shops based on location and common repairs.</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

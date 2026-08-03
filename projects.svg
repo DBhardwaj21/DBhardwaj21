@@ -1,171 +1,183 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="100%" height="100%">
   <defs>
+    <linearGradient id="bg-projects" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
     <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.6"/>
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.2"/>
     </linearGradient>
-    
-    <pattern id="grid-projects" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="20" cy="20" r="1" fill="#1E293B"/>
+
+    <pattern id="grid-projects" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E293B" stroke-width="0.75" stroke-dasharray="2 2"/>
     </pattern>
   </defs>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700;800&amp;display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap');
 
-    .header-title { font-family: 'JetBrains Mono', monospace; font-weight: 800; font-size: 22px; fill: #F8FAFC; letter-spacing: 1.5px; }
-    .card-title { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 16px; fill: #F8FAFC; }
-    .card-desc { font-family: 'Inter', sans-serif; font-size: 12px; fill: #94A3B8; font-weight: 400; line-height: 1.5; }
-    .tag-text { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #22D3EE; font-weight: 600; }
-    .status-active { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #34D399; font-weight: 700; }
-    .status-running { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #3B82F6; font-weight: 700; }
-    .status-stable { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #A78BFA; font-weight: 700; }
-    .status-prod { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #F59E0B; font-weight: 700; }
+    .font-mono { font-family: 'Fira Code', monospace; }
+    .font-sans { font-family: 'Inter', sans-serif; }
+
+    .hdr-title { font-size: 15px; font-weight: 700; fill: #00F0FF; letter-spacing: 1.5px; }
+    .card-title { font-size: 14.5px; font-weight: 700; fill: #F8FAFC; }
+    .card-desc { font-size: 11.5px; fill: #94A3B8; font-weight: 400; line-height: 1.5; }
+    .tag-txt { font-size: 10px; fill: #00F0FF; font-weight: 600; }
+    .quote-txt { font-size: 12.5px; fill: #F8FAFC; font-weight: 600; }
   </style>
 
-  <!-- Background -->
-  <rect width="900" height="480" rx="16" fill="#0B1120" stroke="#1E293B" stroke-width="1"/>
-  <rect width="900" height="480" rx="16" fill="url(#grid-projects)" opacity="0.6"/>
+  <!-- Container Box -->
+  <rect width="900" height="460" rx="14" fill="url(#bg-projects)" stroke="#1E293B" stroke-width="1.5"/>
+  <rect width="900" height="460" rx="14" fill="url(#grid-projects)" opacity="0.5"/>
 
-  <!-- Section Title Header -->
-  <g transform="translate(40, 40)">
-    <text x="0" y="0" class="header-title">FEATURED_PROJECTS<tspan fill="#22D3EE">()</tspan></text>
-    <line x1="0" y1="12" x2="820" y2="12" stroke="#1E293B" stroke-width="1"/>
+  <!-- Header -->
+  <g transform="translate(36, 32)">
+    <rect width="210" height="30" rx="6" fill="#080E1E" stroke="#1E293B" stroke-width="1.5"/>
+    <text x="14" y="20" class="font-mono hdr-title">⚡ FEATURED_PROJECTS</text>
   </g>
 
-  <!-- GRID 2x2 -->
+  <!-- 2x2 CARDS GRID -->
 
   <!-- CARD 1: AI Code Review Agent -->
-  <g transform="translate(40, 75)">
-    <rect width="400" height="175" rx="12" fill="#111827" stroke="url(#card-border)" stroke-width="1.5"/>
-    
-    <!-- Top Bar -->
-    <g transform="translate(20, 25)">
-      <circle cx="10" cy="10" r="10" fill="#0284C7" opacity="0.2"/>
-      <path d="M 6 10 L 9 13 L 14 7" stroke="#22D3EE" stroke-width="2" fill="none"/>
-      <text x="30" y="14" class="card-title">AI Code Review Agent</text>
-      
-      <!-- Status Badge -->
-      <rect x="270" y="0" width="90" height="20" rx="10" fill="#064E3B"/>
-      <circle cx="282" cy="10" r="3" fill="#34D399"/>
-      <text x="292" y="14" class="status-active">ACTIVE</text>
-    </g>
+  <g transform="translate(36, 76)">
+    <rect width="404" height="150" rx="10" fill="#0D1424" stroke="url(#card-border)" stroke-width="1.5"/>
+    <rect width="404" height="150" rx="10" fill="none" stroke="#00F0FF" stroke-width="1" opacity="0.2"/>
+
+    <!-- Title & Status -->
+    <text x="16" y="28" class="font-sans card-title">🤖 AI Code Review Agent</text>
+    <rect x="316" y="14" width="72" height="18" rx="9" fill="#064E3B"/>
+    <circle cx="326" cy="23" r="3" fill="#34D399"/>
+    <text x="334" y="26" class="font-mono" font-size="9" fill="#34D399" font-weight="700">ACTIVE</text>
 
     <!-- Description -->
-    <text x="20" y="75" class="card-desc" width="360">Autonomous PR review system using LLMs &amp; GitHub Apps to perform static analysis, flag security bugs, &amp; suggest optimizations.</text>
+    <text x="16" y="54" class="font-sans card-desc">Autonomous PR review system using LLMs &amp; GitHub Apps</text>
+    <text x="16" y="70" class="font-sans card-desc">to perform static analysis, flag security bugs, &amp; suggest fixes.</text>
 
-    <!-- Tech Stack Badges -->
-    <g transform="translate(20, 130)">
-      <rect x="0" y="0" width="60" height="22" rx="4" fill="#1E293B"/>
-      <text x="10" y="15" class="tag-text">Python</text>
+    <!-- Tech Tags -->
+    <g transform="translate(16, 96)">
+      <rect x="0" y="0" width="56" height="20" rx="4" fill="#1E293B"/>
+      <text x="8" y="14" class="font-mono tag-txt">Python</text>
 
-      <rect x="66" y="0" width="62" height="22" rx="4" fill="#1E293B"/>
-      <text x="76" y="15" class="tag-text">FastAPI</text>
+      <rect x="62" y="0" width="58" height="20" rx="4" fill="#1E293B"/>
+      <text x="70" y="14" class="font-mono tag-txt">FastAPI</text>
 
-      <rect x="134" y="0" width="88" height="22" rx="4" fill="#1E293B"/>
-      <text x="144" y="15" class="tag-text">GitHub Apps</text>
+      <rect x="126" y="0" width="80" height="20" rx="4" fill="#1E293B"/>
+      <text x="134" y="14" class="font-mono tag-txt">GitHub Apps</text>
 
-      <rect x="228" y="0" width="60" height="22" rx="4" fill="#1E293B"/>
-      <text x="238" y="15" class="tag-text">OpenAI</text>
+      <rect x="212" y="0" width="56" height="20" rx="4" fill="#1E293B"/>
+      <text x="220" y="14" class="font-mono tag-txt">OpenAI</text>
     </g>
+
+    <!-- Link -->
+    <text x="16" y="136" class="font-mono" font-size="11" fill="#38BDF8" font-weight="700">View Repository →</text>
   </g>
 
-  <!-- CARD 2: Agentic RAG -->
-  <g transform="translate(460, 75)">
-    <rect width="400" height="175" rx="12" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
-    
-    <!-- Top Bar -->
-    <g transform="translate(20, 25)">
-      <circle cx="10" cy="10" r="10" fill="#1E3A8A" opacity="0.4"/>
-      <circle cx="10" cy="10" r="4" fill="#3B82F6"/>
-      <text x="30" y="14" class="card-title">Agentic RAG Engine</text>
-      
-      <!-- Status Badge -->
-      <rect x="270" y="0" width="90" height="20" rx="10" fill="#1E3A8A"/>
-      <circle cx="282" cy="10" r="3" fill="#3B82F6"/>
-      <text x="292" y="14" class="status-running">RUNNING</text>
-    </g>
+  <!-- CARD 2: Agentic RAG Assistant -->
+  <g transform="translate(460, 76)">
+    <rect width="404" height="150" rx="10" fill="#0D1424" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Title & Status -->
+    <text x="16" y="28" class="font-sans card-title">🧠 Agentic RAG Assistant</text>
+    <rect x="310" y="14" width="78" height="18" rx="9" fill="#1E3A8A"/>
+    <circle cx="320" cy="23" r="3" fill="#3B82F6"/>
+    <text x="328" y="26" class="font-mono" font-size="9" fill="#3B82F6" font-weight="700">RUNNING</text>
 
     <!-- Description -->
-    <text x="20" y="75" class="card-desc" width="360">Multi-agent Retrieval Augmented Generation workflow with vector search for deep semantic search across complex developer docs.</text>
+    <text x="16" y="54" class="font-sans card-desc">Multi-agent Retrieval Augmented Generation workflow with</text>
+    <text x="16" y="70" class="font-sans card-desc">vector search for deep semantic search across complex docs.</text>
 
-    <!-- Tech Stack Badges -->
-    <g transform="translate(20, 130)">
-      <rect x="0" y="0" width="76" height="22" rx="4" fill="#1E293B"/>
-      <text x="10" y="15" class="tag-text">LangChain</text>
+    <!-- Tech Tags -->
+    <g transform="translate(16, 96)">
+      <rect x="0" y="0" width="72" height="20" rx="4" fill="#1E293B"/>
+      <text x="8" y="14" class="font-mono tag-txt">LangChain</text>
 
-      <rect x="82" y="0" width="56" height="22" rx="4" fill="#1E293B"/>
-      <text x="92" y="15" class="tag-text">Ollama</text>
+      <rect x="78" y="0" width="54" height="20" rx="4" fill="#1E293B"/>
+      <text x="86" y="14" class="font-mono tag-txt">Ollama</text>
 
-      <rect x="144" y="0" width="56" height="22" rx="4" fill="#1E293B"/>
-      <text x="154" y="15" class="tag-text">Docker</text>
+      <rect x="138" y="0" width="54" height="20" rx="4" fill="#1E293B"/>
+      <text x="146" y="14" class="font-mono tag-txt">Docker</text>
 
-      <rect x="206" y="0" width="74" height="22" rx="4" fill="#1E293B"/>
-      <text x="216" y="15" class="tag-text">ChromaDB</text>
+      <rect x="198" y="0" width="72" height="20" rx="4" fill="#1E293B"/>
+      <text x="206" y="14" class="font-mono tag-txt">ChromaDB</text>
     </g>
+
+    <!-- Link -->
+    <text x="16" y="136" class="font-mono" font-size="11" fill="#38BDF8" font-weight="700">View Repository →</text>
   </g>
 
   <!-- CARD 3: FaceAuth -->
-  <g transform="translate(40, 270)">
-    <rect width="400" height="175" rx="12" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
-    
-    <!-- Top Bar -->
-    <g transform="translate(20, 25)">
-      <circle cx="10" cy="10" r="10" fill="#4C1D95" opacity="0.4"/>
-      <circle cx="10" cy="10" r="4" fill="#8B5CF6"/>
-      <text x="30" y="14" class="card-title">FaceAuth Recognition</text>
-      
-      <!-- Status Badge -->
-      <rect x="270" y="0" width="90" height="20" rx="10" fill="#3B0764"/>
-      <circle cx="282" cy="10" r="3" fill="#A78BFA"/>
-      <text x="292" y="14" class="status-stable">STABLE</text>
-    </g>
+  <g transform="translate(36, 242)">
+    <rect width="404" height="150" rx="10" fill="#0D1424" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Title & Status -->
+    <text x="16" y="28" class="font-sans card-title">🎯 FaceAuth</text>
+    <rect x="318" y="14" width="70" height="18" rx="9" fill="#3B0764"/>
+    <circle cx="328" cy="23" r="3" fill="#A78BFA"/>
+    <text x="336" y="26" class="font-mono" font-size="9" fill="#A78BFA" font-weight="700">STABLE</text>
 
     <!-- Description -->
-    <text x="20" y="75" class="card-desc" width="360">High-precision facial authentication pipeline leveraging DeepFace, FaceNet embeddings, and anti-spoofing verification.</text>
+    <text x="16" y="54" class="font-sans card-desc">High-precision facial authentication pipeline leveraging</text>
+    <text x="16" y="70" class="font-sans card-desc">DeepFace, FaceNet embeddings, and anti-spoofing verification.</text>
 
-    <!-- Tech Stack Badges -->
-    <g transform="translate(20, 130)">
-      <rect x="0" y="0" width="72" height="22" rx="4" fill="#1E293B"/>
-      <text x="10" y="15" class="tag-text">DeepFace</text>
+    <!-- Tech Tags -->
+    <g transform="translate(16, 96)">
+      <rect x="0" y="0" width="56" height="20" rx="4" fill="#1E293B"/>
+      <text x="8" y="14" class="font-mono tag-txt">Python</text>
 
-      <rect x="78" y="0" width="64" height="22" rx="4" fill="#1E293B"/>
-      <text x="88" y="15" class="tag-text">FaceNet</text>
+      <rect x="62" y="0" width="68" height="20" rx="4" fill="#1E293B"/>
+      <text x="70" y="14" class="font-mono tag-txt">DeepFace</text>
 
-      <rect x="148" y="0" width="60" height="22" rx="4" fill="#1E293B"/>
-      <text x="158" y="15" class="tag-text">OpenCV</text>
+      <rect x="136" y="0" width="60" height="20" rx="4" fill="#1E293B"/>
+      <text x="144" y="14" class="font-mono tag-txt">FaceNet</text>
+
+      <rect x="202" y="0" width="56" height="20" rx="4" fill="#1E293B"/>
+      <text x="210" y="14" class="font-mono tag-txt">OpenCV</text>
     </g>
+
+    <!-- Link -->
+    <text x="16" y="136" class="font-mono" font-size="11" fill="#38BDF8" font-weight="700">View Repository →</text>
   </g>
 
   <!-- CARD 4: JobNest -->
-  <g transform="translate(460, 270)">
-    <rect width="400" height="175" rx="12" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
-    
-    <!-- Top Bar -->
-    <g transform="translate(20, 25)">
-      <circle cx="10" cy="10" r="10" fill="#78350F" opacity="0.4"/>
-      <circle cx="10" cy="10" r="4" fill="#F59E0B"/>
-      <text x="30" y="14" class="card-title">JobNest Platform</text>
-      
-      <!-- Status Badge -->
-      <rect x="270" y="0" width="90" height="20" rx="10" fill="#78350F"/>
-      <circle cx="282" cy="10" r="3" fill="#F59E0B"/>
-      <text x="292" y="14" class="status-prod">PRODUCTION</text>
-    </g>
+  <g transform="translate(460, 242)">
+    <rect width="404" height="150" rx="10" fill="#0D1424" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Title & Status -->
+    <text x="16" y="28" class="font-sans card-title">💼 JobNest</text>
+    <rect x="294" y="14" width="94" height="18" rx="9" fill="#78350F"/>
+    <circle cx="304" cy="23" r="3" fill="#F59E0B"/>
+    <text x="312" y="26" class="font-mono" font-size="9" fill="#F59E0B" font-weight="700">PRODUCTION</text>
 
     <!-- Description -->
-    <text x="20" y="75" class="card-desc" width="360">Modern job aggregation platform with AI-driven candidate profile matching and automated application tracking analytics.</text>
+    <text x="16" y="54" class="font-sans card-desc">Modern job aggregation platform with AI-driven candidate</text>
+    <text x="16" y="70" class="font-sans card-desc">profile matching and automated application tracking.</text>
 
-    <!-- Tech Stack Badges -->
-    <g transform="translate(20, 130)">
-      <rect x="0" y="0" width="52" height="22" rx="4" fill="#1E293B"/>
-      <text x="10" y="15" class="tag-text">React</text>
+    <!-- Tech Tags -->
+    <g transform="translate(16, 96)">
+      <rect x="0" y="0" width="50" height="20" rx="4" fill="#1E293B"/>
+      <text x="8" y="14" class="font-mono tag-txt">React</text>
 
-      <rect x="58" y="0" width="64" height="22" rx="4" fill="#1E293B"/>
-      <text x="68" y="15" class="tag-text">Express</text>
+      <rect x="56" y="0" width="58" height="20" rx="4" fill="#1E293B"/>
+      <text x="64" y="14" class="font-mono tag-txt">Express</text>
 
-      <rect x="128" y="0" width="70" height="22" rx="4" fill="#1E293B"/>
-      <text x="138" y="15" class="tag-text">MongoDB</text>
+      <rect x="120" y="0" width="58" height="20" rx="4" fill="#1E293B"/>
+      <text x="128" y="14" class="font-mono tag-txt">Node.js</text>
+
+      <rect x="184" y="0" width="68" height="20" rx="4" fill="#1E293B"/>
+      <text x="192" y="14" class="font-mono tag-txt">MongoDB</text>
     </g>
+
+    <!-- Link -->
+    <text x="16" y="136" class="font-mono" font-size="11" fill="#38BDF8" font-weight="700">View Repository →</text>
+  </g>
+
+  <!-- Quote Banner Box -->
+  <g transform="translate(36, 408)">
+    <rect width="828" height="38" rx="8" fill="#080E1E" stroke="#1E293B" stroke-width="1.5"/>
+    <text x="414" y="24" text-anchor="middle" class="font-mono quote-txt">
+      <tspan fill="#00F0FF" font-size="16">“</tspan> Code is my craft, AI is my tool, and solving real problems is my mission. <tspan fill="#00F0FF" font-size="16">”</tspan>
+    </text>
   </g>
 </svg>
