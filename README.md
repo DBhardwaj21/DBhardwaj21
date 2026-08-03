@@ -14,7 +14,7 @@
 
 <br />
 
-<!-- ==================== FEATURED PROJECTS (FULL WIDTH 2x2 GRID) ==================== -->
+<!-- ==================== FEATURED PROJECTS ==================== -->
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td bgcolor="#0B1120" style="padding: 10px 16px; border-radius: 8px; border: 1px solid #1E293B;">
@@ -135,45 +135,35 @@ Modern job aggregation platform with AI-driven candidate profile matching and au
 
 <br />
 
-<!-- ==================== 2-COLUMN GRID: ANALYTICS & TECH STACK/EXPERIENCE ==================== -->
-<table width="100%" border="0" cellspacing="12" cellpadding="0">
-<tr valign="top">
-
-<!-- LEFT COLUMN: GITHUB ANALYTICS (50% WIDTH) -->
-<td width="50%" valign="top">
-
+<!-- ==================== GITHUB ANALYTICS ==================== -->
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td bgcolor="#0B1120" style="padding: 10px 16px; border-radius: 8px; border: 1px solid #1E293B;">
-<b style="color: #22D3EE; font-family: monospace; font-size: 13.5px;">📊 GITHUB_ANALYTICS</b>
+<b style="color: #22D3EE; font-family: monospace; font-size: 14px;">📊 GITHUB_ANALYTICS()</b>
 </td>
 </tr>
 </table>
 
 <br/>
 
-<div align="center">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=DBhardwaj21&theme=tokyonight&hide_border=true&border_radius=8" width="100%" alt="GitHub Streak Stats" />
-</div>
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=DBhardwaj21&theme=tokyonight&hide_border=true&border_radius=8" height="175" alt="GitHub Streak Stats" />
+  &nbsp;
+  <img src="https://github-readme-stats.vercel.app/api?username=DBhardwaj21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="175" alt="GitHub Stats" />
+</p>
 
 <br/>
 
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=DBhardwaj21&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="100%" alt="GitHub Stats" />
-</div>
-
-<br/>
-
-<div align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DBhardwaj21&layout=compact&theme=tokyonight&hide_border=true&hide=html,css" width="100%" alt="Top Languages" />
-</div>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DBhardwaj21&layout=compact&theme=tokyonight&hide_border=true&hide=html,css" height="165" alt="Top Languages" />
+</p>
 
 <br/>
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td bgcolor="#0B1120" style="padding: 12px; border-radius: 10px; border: 1px solid #1E293B;" align="center">
-<span style="color: #94A3B8; font-family: monospace; font-size: 11.5px; font-weight: bold;">CONTRIBUTION MATRIX</span>
+<td bgcolor="#0B1120" style="padding: 14px; border-radius: 10px; border: 1px solid #1E293B;" align="center">
+<span style="color: #94A3B8; font-family: monospace; font-size: 12px; font-weight: bold;">CONTRIBUTION MATRIX</span>
 <br/><br/>
 <picture>
 <source media="(prefers-color-scheme: dark)" srcset="output/snake-dark.svg">
@@ -184,86 +174,82 @@ Modern job aggregation platform with AI-driven candidate profile matching and au
 </tr>
 </table>
 
-</td>
+<br />
 
-<!-- RIGHT COLUMN: TECH STACK & EXPERIENCE (50% WIDTH) -->
+<div align="center">
+  <img src="divider.svg" width="100%" alt="Divider" />
+</div>
+
+<br />
+
+<!-- ==================== TECH STACK & EXPERIENCE (2-COLUMN GRID) ==================== -->
+<table width="100%" border="0" cellspacing="10" cellpadding="0">
+<tr valign="top">
+
+<!-- Left Column: TECH STACK -->
 <td width="50%" valign="top">
-
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td bgcolor="#0B1120" style="padding: 10px 16px; border-radius: 8px; border: 1px solid #1E293B;">
-<b style="color: #22D3EE; font-family: monospace; font-size: 13.5px;">🛠️ TECH_STACK &amp; EXPERIENCE</b>
+<b style="color: #22D3EE; font-family: monospace; font-size: 13.5px;">🛠️ INSTALLED_MODULES // STACK</b>
 </td>
 </tr>
 </table>
-
 <br/>
-
-<!-- TECH STACK CARD -->
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td bgcolor="#0B1120" style="padding: 16px; border-radius: 10px; border: 1px solid #1E293B;">
 <div style="font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 12px; color: #F8FAFC;">
 
-<table width="100%" border="0">
-<tr>
-<td width="50%" valign="top">
 <span style="color: #38BDF8; font-weight: bold;">🧠 AI / ML</span><br/>
-<span style="color: #94A3B8;">🔹 LangChain</span><br/>
-<span style="color: #94A3B8;">🔹 OpenAI</span><br/>
-<span style="color: #94A3B8;">🔹 Gemini</span><br/>
-<span style="color: #94A3B8;">🔹 Ollama</span><br/>
-<span style="color: #94A3B8;">🔹 ChromaDB</span>
-</td>
-<td width="50%" valign="top">
+<span style="color: #94A3B8;">🔹 LangChain &nbsp;•&nbsp; OpenAI &nbsp;•&nbsp; Gemini</span><br/>
+<span style="color: #94A3B8;">🔹 Ollama &nbsp;•&nbsp; ChromaDB</span>
+
+<br/><br/>
+
 <span style="color: #34D399; font-weight: bold;">⚙️ BACKEND</span><br/>
-<span style="color: #94A3B8;">🔹 Python</span><br/>
-<span style="color: #94A3B8;">🔹 FastAPI</span><br/>
-<span style="color: #94A3B8;">🔹 Node.js</span><br/>
-<span style="color: #94A3B8;">🔹 Express</span>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top" style="padding-top: 12px;">
+<span style="color: #94A3B8;">🔹 Python &nbsp;•&nbsp; FastAPI</span><br/>
+<span style="color: #94A3B8;">🔹 Node.js &nbsp;•&nbsp; Express</span>
+
+<br/><br/>
+
 <span style="color: #F472B6; font-weight: bold;">🎨 FRONTEND</span><br/>
-<span style="color: #94A3B8;">🔹 React</span><br/>
-<span style="color: #94A3B8;">🔹 TypeScript</span><br/>
-<span style="color: #94A3B8;">🔹 Tailwind CSS</span>
-</td>
-<td width="50%" valign="top" style="padding-top: 12px;">
+<span style="color: #94A3B8;">🔹 React &nbsp;•&nbsp; TypeScript &nbsp;•&nbsp; Tailwind CSS</span>
+
+<br/><br/>
+
 <span style="color: #F59E0B; font-weight: bold;">🗄️ DATABASE</span><br/>
-<span style="color: #94A3B8;">🔹 MongoDB</span><br/>
-<span style="color: #94A3B8;">🔹 PostgreSQL</span>
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top" style="padding-top: 12px;">
+<span style="color: #94A3B8;">🔹 MongoDB &nbsp;•&nbsp; PostgreSQL</span>
+
+<br/><br/>
+
 <span style="color: #A78BFA; font-weight: bold;">🚀 DEVOPS / TOOLS</span><br/>
 <span style="color: #94A3B8;">🔹 Docker &nbsp;•&nbsp; GitHub Actions &nbsp;•&nbsp; Linux &nbsp;•&nbsp; Nginx</span>
-</td>
-</tr>
-</table>
 
 </div>
 </td>
 </tr>
 </table>
+</td>
 
+<!-- Right Column: WORK EXPERIENCE -->
+<td width="50%" valign="top">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td bgcolor="#0B1120" style="padding: 10px 16px; border-radius: 8px; border: 1px solid #1E293B;">
+<b style="color: #22D3EE; font-family: monospace; font-size: 13.5px;">💼 WORK_EXPERIENCE</b>
+</td>
+</tr>
+</table>
 <br/>
-
-<!-- EXPERIENCE CARD -->
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td bgcolor="#0B1120" style="padding: 16px; border-radius: 10px; border: 1px solid #1E293B;">
 
-<div style="font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 11px; color: #22D3EE; font-weight: bold; margin-bottom: 12px;">
-💼 WORK_EXPERIENCE
-</div>
-
 <div>
 <table width="100%" border="0">
 <tr>
-<td><b style="color: #F8FAFC; font-size: 13px;">Specialist Programmer</b></td>
+<td><b style="color: #F8FAFC; font-size: 13.5px;">Specialist Programmer</b></td>
 <td align="right"><span style="color: #64748B; font-size: 11px;">2024 – Present</span></td>
 </tr>
 </table>
@@ -278,7 +264,7 @@ Working on AI-driven solutions, automation tools and enterprise grade applicatio
 <div style="margin-top: 10px;">
 <table width="100%" border="0">
 <tr>
-<td><b style="color: #F8FAFC; font-size: 13px;">AI/ML Intern</b></td>
+<td><b style="color: #F8FAFC; font-size: 13.5px;">AI/ML Intern</b></td>
 <td align="right"><span style="color: #64748B; font-size: 11px;">Jul 2024 – Aug 2024</span></td>
 </tr>
 </table>
@@ -291,7 +277,6 @@ Developed a prototype recommendation engine for repair shops based on location a
 </td>
 </tr>
 </table>
-
 </td>
 
 </tr>
