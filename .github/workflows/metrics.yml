@@ -18,7 +18,7 @@ jobs:
       - name: Generate Core Metrics
         uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
           user: DBhardwaj21
           template: classic
           base: header, activity, community, repositories, metadata

@@ -1,141 +1,328 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 290" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 390" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bg-dark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B1120"/>
-      <stop offset="60%" stop-color="#0F172A"/>
-      <stop offset="100%" stop-color="#1E1B4B"/>
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="50%" stop-color="#0B1224"/>
+      <stop offset="100%" stop-color="#0E162B"/>
     </linearGradient>
 
-    <!-- Primary Accent Gradient -->
-    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#22D3EE"/>
+    <!-- Accent Gradient -->
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF"/>
       <stop offset="50%" stop-color="#3B82F6"/>
       <stop offset="100%" stop-color="#8B5CF6"/>
     </linearGradient>
 
+    <linearGradient id="hud-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <radialGradient id="avatar-aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.35"/>
+      <stop offset="65%" stop-color="#3B82F6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0B1224" stop-opacity="0"/>
+    </radialGradient>
+
     <!-- Grid Pattern -->
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.75" stroke-dasharray="2 2"/>
-      <circle cx="30" cy="30" r="1" fill="#334155"/>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E293B" stroke-width="0.75" stroke-dasharray="2 2"/>
+      <circle cx="24" cy="24" r="1" fill="#334155"/>
     </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
   <style>
-    .font-mono { font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, "Liberation Mono", monospace; }
-    .font-sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-    
-    .title { font-weight: 800; font-size: 34px; fill: #F8FAFC; letter-spacing: 2px; }
-    .subtitle { font-weight: 700; font-size: 13px; fill: #22D3EE; letter-spacing: 2px; }
-    .tagline { font-size: 13.5px; fill: #94A3B8; font-weight: 400; }
-    .status-lbl { font-size: 10.5px; fill: #64748B; font-weight: 700; letter-spacing: 1px; }
-    .badge-txt { font-size: 11px; fill: #CBD5E1; font-weight: 600; }
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap');
+
+    .font-mono { font-family: 'Fira Code', ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .font-sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+    .tag-top { font-size: 11px; fill: #00F0FF; font-weight: 700; letter-spacing: 1.5px; }
+    .title-name { font-size: 34px; font-weight: 800; fill: #FFFFFF; letter-spacing: 1.5px; }
+    .title-role { font-size: 15px; font-weight: 700; fill: #00F0FF; letter-spacing: 2px; }
+    .tagline { font-size: 13px; font-weight: 600; fill: #CBD5E1; }
+    .bio-text { font-size: 11.5px; fill: #94A3B8; line-height: 1.5; font-weight: 400; }
+
+    .status-hdr { font-size: 10px; font-weight: 700; fill: #00F0FF; letter-spacing: 1.5px; }
+    .status-lbl { font-size: 9.5px; font-weight: 600; fill: #64748B; letter-spacing: 1px; }
+    .status-val { font-size: 9.5px; font-weight: 700; fill: #34D399; letter-spacing: 1px; }
+
+    .code-txt { font-size: 11px; fill: #E2E8F0; line-height: 1.55; }
+    .term-txt { font-size: 10.5px; fill: #38BDF8; line-height: 1.6; }
 
     @keyframes pulse {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 0.8; }
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.95; }
+    }
+    @keyframes rotateRing {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
     @keyframes blink {
       0%, 100% { opacity: 1; }
       50% { opacity: 0; }
     }
-    .pulse-glow { animation: pulse 4s ease-in-out infinite; }
-    .blink-cursor { animation: blink 1s infinite; }
+
+    .pulse-glow { animation: pulse 3s infinite ease-in-out; }
+    .cursor-blink { animation: blink 1s infinite; }
   </style>
 
   <!-- Container Box -->
-  <rect width="900" height="290" rx="14" fill="url(#bg-dark)" stroke="#1E293B" stroke-width="1"/>
-  <rect width="900" height="290" rx="14" fill="url(#grid)" opacity="0.7"/>
+  <rect width="960" height="390" rx="14" fill="url(#bg-dark)" stroke="#1E293B" stroke-width="1.5"/>
+  <rect width="960" height="390" rx="14" fill="url(#grid)" opacity="0.65"/>
 
-  <!-- Top Border Accent -->
-  <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 886 0 C 893.73 0 900 6.27 900 14 L 900 4 L 0 4 Z" fill="url(#accent-grad)"/>
+  <!-- Top Accent Bar -->
+  <path d="M 0 14 C 0 6.27 6.27 0 14 0 L 946 0 C 953.73 0 960 6.27 960 14 L 960 4 L 0 4 Z" fill="url(#cyan-glow)"/>
 
-  <!-- Left Hero Content -->
-  <g transform="translate(45, 42)">
-    <!-- Subtitle Pill -->
+  <!-- ==================== LEFT SECTION: BIO & STATUS ==================== -->
+  <g transform="translate(38, 32)">
+
+    <!-- Tag: > DEV//OS -->
     <g transform="translate(0, 0)">
-      <rect width="135" height="24" rx="5" fill="#1E293B" stroke="#334155" stroke-width="1"/>
-      <circle cx="12" cy="12" r="3.5" fill="#22D3EE"/>
-      <text x="24" y="16" class="font-mono subtitle">AI ENGINEER</text>
+      <text x="0" y="10" class="font-mono tag-top">&gt; DEV//OS</text>
     </g>
 
-    <!-- Title -->
-    <text x="0" y="65" class="font-mono title">DEV<tspan fill="url(#accent-grad)">//</tspan>NEXUS</text>
+    <!-- Name: DEV BHARDWAJ -->
+    <text x="0" y="44" class="font-sans title-name">DEV BHARDWAJ</text>
 
-    <!-- Tagline -->
-    <text x="0" y="92" class="font-sans tagline">Building Intelligent Developer Tools using LLMs &amp; Agentic AI</text>
+    <!-- Subtitle: AI ENGINEER -->
+    <text x="0" y="68" class="font-mono title-role">AI ENGINEER</text>
 
-    <!-- Badges Row -->
-    <g transform="translate(0, 120)">
+    <!-- Sub-tagline -->
+    <text x="0" y="94" class="font-sans tagline">Building Intelligent Developer Tools</text>
+
+    <!-- Bio paragraph -->
+    <text x="0" y="116" class="font-sans bio-text">I build AI-powered applications and developer tools that</text>
+    <text x="0" y="132" class="font-sans bio-text">leverage LLMs, Agentic AI and modern backend systems</text>
+    <text x="0" y="148" class="font-sans bio-text">to solve real-world problems.</text>
+
+    <!-- Tech Badges Pill Row -->
+    <g transform="translate(0, 166)">
       <!-- Python -->
-      <rect x="0" y="0" width="76" height="24" rx="6" fill="#1E293B" stroke="#334155"/>
-      <circle cx="12" cy="12" r="3" fill="#38BDF8"/>
-      <text x="22" y="16" class="font-mono badge-txt">Python</text>
+      <rect x="0" y="0" width="70" height="22" rx="11" fill="#0F172A" stroke="#1E293B"/>
+      <circle cx="10" cy="11" r="3" fill="#38BDF8"/>
+      <text x="18" y="15" class="font-mono" font-size="10" fill="#CBD5E1" font-weight="600">Python</text>
 
       <!-- FastAPI -->
-      <rect x="84" y="0" width="78" height="24" rx="6" fill="#1E293B" stroke="#334155"/>
-      <circle cx="96" cy="12" r="3" fill="#34D399"/>
-      <text x="106" y="16" class="font-mono badge-txt">FastAPI</text>
-
-      <!-- PyTorch -->
-      <rect x="170" y="0" width="82" height="24" rx="6" fill="#1E293B" stroke="#334155"/>
-      <circle cx="182" cy="12" r="3" fill="#F87171"/>
-      <text x="192" y="16" class="font-mono badge-txt">PyTorch</text>
+      <rect x="76" y="0" width="72" height="22" rx="11" fill="#0F172A" stroke="#1E293B"/>
+      <circle cx="86" cy="11" r="3" fill="#34D399"/>
+      <text x="94" y="15" class="font-mono" font-size="10" fill="#CBD5E1" font-weight="600">FastAPI</text>
 
       <!-- LangChain -->
-      <rect x="260" y="0" width="92" height="24" rx="6" fill="#1E293B" stroke="#334155"/>
-      <circle cx="272" cy="12" r="3" fill="#A78BFA"/>
-      <text x="282" y="16" class="font-mono badge-txt">LangChain</text>
+      <rect x="154" y="0" width="84" height="22" rx="11" fill="#0F172A" stroke="#1E293B"/>
+      <circle cx="164" cy="11" r="3" fill="#A78BFA"/>
+      <text x="172" y="15" class="font-mono" font-size="10" fill="#CBD5E1" font-weight="600">LangChain</text>
+
+      <!-- GitHub Apps -->
+      <rect x="244" y="0" width="94" height="22" rx="11" fill="#0F172A" stroke="#1E293B"/>
+      <circle cx="254" cy="11" r="3" fill="#00F0FF"/>
+      <text x="262" y="15" class="font-mono" font-size="10" fill="#CBD5E1" font-weight="600">GitHub Apps</text>
+
+      <!-- Docker -->
+      <rect x="344" y="0" width="72" height="22" rx="11" fill="#0F172A" stroke="#1E293B"/>
+      <circle cx="354" cy="11" r="3" fill="#60A5FA"/>
+      <text x="362" y="15" class="font-mono" font-size="10" fill="#CBD5E1" font-weight="600">Docker</text>
     </g>
 
-    <!-- Status Subline -->
-    <g transform="translate(0, 182)">
-      <circle cx="5" cy="5" r="3.5" fill="#34D399"/>
-      <text x="16" y="9" class="font-mono" font-size="11" fill="#94A3B8">STATUS: <tspan fill="#34D399" font-weight="700">ONLINE</tspan> | LOCATION: <tspan fill="#F8FAFC">INDIA</tspan></text>
+    <!-- SYSTEM STATUS Box -->
+    <g transform="translate(0, 208)">
+      <rect width="280" height="95" rx="8" fill="#080E1E" stroke="#1E293B" stroke-width="1.5"/>
+      <rect width="280" height="95" rx="8" fill="none" stroke="#00F0FF" stroke-width="1" opacity="0.25"/>
+
+      <!-- Header -->
+      <text x="14" y="22" class="font-mono status-hdr">SYSTEM STATUS</text>
+      <line x1="14" y1="28" x2="266" y2="28" stroke="#1E293B" stroke-width="1"/>
+
+      <!-- Items -->
+      <text x="14" y="46" class="font-mono status-lbl">AI SYSTEMS:</text>
+      <text x="100" y="46" class="font-mono status-val">ONLINE</text>
+
+      <text x="14" y="62" class="font-mono status-lbl">BUILDING:</text>
+      <text x="100" y="62" class="font-mono status-val">EVERYDAY</text>
+
+      <text x="14" y="78" class="font-mono status-lbl">FOCUS:</text>
+      <text x="100" y="78" class="font-mono status-val" fill="#00F0FF">AI • AGENTS • AUTOMATION</text>
+    </g>
+
+  </g>
+
+
+  <!-- ==================== CENTER SECTION: CYBER HUD AVATAR ==================== -->
+  <g transform="translate(485, 195)">
+    <!-- Radial Glow Background -->
+    <circle cx="0" cy="0" r="140" fill="url(#avatar-aura)"/>
+
+    <!-- Tech Circuit Ring Details -->
+    <circle cx="0" cy="0" r="125" fill="none" stroke="#00F0FF" stroke-width="1" stroke-dasharray="6 6" opacity="0.4"/>
+    <circle cx="0" cy="0" r="116" fill="none" stroke="url(#hud-ring)" stroke-width="2.5" filter="url(#neon-glow)"/>
+    <circle cx="0" cy="0" r="106" fill="none" stroke="#3B82F6" stroke-width="1" stroke-dasharray="30 10 5 10" opacity="0.6"/>
+    <circle cx="0" cy="0" r="98" fill="#090F1F" stroke="#1E293B" stroke-width="2"/>
+
+    <!-- Sci-Fi HUD Crosshairs -->
+    <line x1="-128" y1="0" x2="-106" y2="0" stroke="#00F0FF" stroke-width="2"/>
+    <line x1="106" y1="0" x2="128" y2="0" stroke="#00F0FF" stroke-width="2"/>
+    <line x1="0" y1="-128" x2="0" y2="-106" stroke="#00F0FF" stroke-width="2"/>
+    <line x1="0" y1="106" x2="0" y2="128" stroke="#00F0FF" stroke-width="2"/>
+
+    <circle cx="-116" cy="0" r="3" fill="#00F0FF"/>
+    <circle cx="116" cy="0" r="3" fill="#00F0FF"/>
+    <circle cx="0" cy="-116" r="3" fill="#00F0FF"/>
+    <circle cx="0" cy="116" r="3" fill="#00F0FF"/>
+
+    <!-- Developer Portrait / Futuristic Sci-Fi Tech Avatar Silhouette -->
+    <!-- Head & Hair outline -->
+    <path d="M -42 22 C -42 -25 -30 -62 0 -62 C 30 -62 42 -25 42 22 C 40 45 30 65 0 65 C -30 65 -40 45 -42 22 Z" fill="#0C1427" stroke="#00F0FF" stroke-width="1.5"/>
+    
+    <!-- Curly Hair representation -->
+    <path d="M -32 -38 C -40 -52 -20 -68 -5 -66 C 10 -68 32 -55 35 -38 C 25 -52 10 -58 0 -56 C -12 -58 -24 -50 -32 -38 Z" fill="#00F0FF" opacity="0.8"/>
+    <circle cx="-20" cy="-52" r="10" fill="#1E293B"/>
+    <circle cx="0" cy="-58" r="12" fill="#1E293B"/>
+    <circle cx="20" cy="-52" r="10" fill="#1E293B"/>
+    <circle cx="-12" cy="-48" r="8" fill="#00F0FF" opacity="0.6"/>
+    <circle cx="12" cy="-48" r="8" fill="#00F0FF" opacity="0.6"/>
+
+    <!-- Sci-Fi HUD Glasses -->
+    <rect x="-28" y="-14" width="22" height="14" rx="3" fill="#00F0FF" opacity="0.85" stroke="#FFFFFF" stroke-width="1"/>
+    <rect x="6" y="-14" width="22" height="14" rx="3" fill="#00F0FF" opacity="0.85" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="-6" y1="-7" x2="6" y2="-7" stroke="#00F0FF" stroke-width="2"/>
+    <line x1="-36" y1="-7" x2="-28" y2="-7" stroke="#00F0FF" stroke-width="2"/>
+    <line x1="28" y1="-7" x2="36" y2="-7" stroke="#00F0FF" stroke-width="2"/>
+
+    <!-- Mustache / Facial detail -->
+    <path d="M -12 10 Q 0 16 12 10 Q 0 12 -12 10 Z" fill="#38BDF8"/>
+
+    <!-- Hoodie / Shoulders -->
+    <path d="M -70 85 C -65 50 -45 42 -25 40 L 0 52 L 25 40 C 45 42 65 50 70 85 Z" fill="#0F172A" stroke="#00F0FF" stroke-width="1.5"/>
+    <!-- Hoodie Strings & Zip -->
+    <line x1="0" y1="52" x2="0" y2="85" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <path d="M -14 44 C -20 60 -18 75 -15 85" fill="none" stroke="#3B82F6" stroke-width="1.5"/>
+    <path d="M 14 44 C 20 60 18 75 15 85" fill="none" stroke="#3B82F6" stroke-width="1.5"/>
+  </g>
+
+
+  <!-- ==================== RIGHT SECTION: TERMINAL & CODE.EXE ==================== -->
+
+  <!-- TERMINAL WINDOW -->
+  <g transform="translate(635, 30)">
+    <rect width="215" height="105" rx="8" fill="#080E1E" stroke="#1E293B" stroke-width="1.5"/>
+    <rect width="215" height="24" rx="8" fill="#0F172A"/>
+    <line x1="0" y1="24" x2="215" y2="24" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Window Dots -->
+    <circle cx="12" cy="12" r="3.5" fill="#EF4444"/>
+    <circle cx="23" cy="12" r="3.5" fill="#F59E0B"/>
+    <circle cx="34" cy="12" r="3.5" fill="#10B981"/>
+
+    <text x="50" y="16" class="font-mono" font-size="9.5" fill="#94A3B8" font-weight="600">TERMINAL</text>
+
+    <!-- Terminal Output Text -->
+    <g transform="translate(12, 42)">
+      <text x="0" y="0" class="font-mono term-txt">&gt; building the future</text>
+      <text x="0" y="16" class="font-mono term-txt">&gt; deploying intelligence</text>
+      <text x="0" y="32" class="font-mono term-txt">&gt; automating everything</text>
+      <text x="0" y="48" class="font-mono term-txt">&gt; <tspan class="cursor-blink" fill="#00F0FF">_</tspan></text>
     </g>
   </g>
 
-  <!-- Right Side Panel -->
-  <g transform="translate(540, 35)">
-    <rect width="315" height="220" rx="10" fill="#111827" stroke="#1E293B" stroke-width="1.5"/>
-    <rect width="315" height="32" rx="10" fill="#1E293B" opacity="0.7"/>
+  <!-- CODE.EXE WINDOW -->
+  <g transform="translate(635, 148)">
+    <rect width="250" height="210" rx="8" fill="#080E1E" stroke="#1E293B" stroke-width="1.5"/>
+    <rect width="250" height="24" rx="8" fill="#0F172A"/>
+    <line x1="0" y1="24" x2="250" y2="24" stroke="#1E293B" stroke-width="1"/>
 
-    <!-- Window buttons -->
-    <circle cx="18" cy="16" r="4.5" fill="#EF4444"/>
-    <circle cx="32" cy="16" r="4.5" fill="#F59E0B"/>
-    <circle cx="46" cy="16" r="4.5" fill="#10B981"/>
-    <text x="65" y="20" class="font-mono" font-size="11" fill="#94A3B8" font-weight="600">SYSTEM_CONTROL.sh</text>
+    <!-- Window Dots -->
+    <circle cx="12" cy="12" r="3.5" fill="#EF4444"/>
+    <circle cx="23" cy="12" r="3.5" fill="#F59E0B"/>
+    <circle cx="34" cy="12" r="3.5" fill="#10B981"/>
 
-    <!-- Item 1 -->
-    <g transform="translate(18, 48)">
-      <text x="0" y="14" class="font-mono status-lbl">AI SYSTEMS</text>
-      <rect x="145" y="2" width="135" height="16" rx="4" fill="#064E3B"/>
-      <rect x="145" y="2" width="135" height="16" rx="4" fill="#10B981"/>
-      <text x="152" y="14" class="font-mono" font-size="9.5" fill="#FFFFFF" font-weight="700">100% ONLINE</text>
-    </g>
+    <text x="50" y="16" class="font-mono" font-size="9.5" fill="#94A3B8" font-weight="600">CODE.EXE</text>
 
-    <!-- Item 2 -->
-    <g transform="translate(18, 86)">
-      <text x="0" y="14" class="font-mono status-lbl">AGENTIC ENGINE</text>
-      <rect x="145" y="2" width="135" height="16" rx="4" fill="#1E3A8A"/>
-      <rect x="145" y="2" width="135" height="16" rx="4" fill="#3B82F6"/>
-      <text x="152" y="14" class="font-mono" font-size="9.5" fill="#FFFFFF" font-weight="700">ACTIVE // RUNNING</text>
-    </g>
+    <!-- Python Code Syntax Highlighted -->
+    <g transform="translate(14, 44)">
+      <!-- Line 1 -->
+      <text x="0" y="0" class="font-mono code-txt"><tspan fill="#F43F5E">from</tspan> dev <tspan fill="#F43F5E">import</tspan> build</text>
 
-    <!-- Item 3 -->
-    <g transform="translate(18, 124)">
-      <text x="0" y="14" class="font-mono status-lbl">API GATEWAY</text>
-      <rect x="145" y="2" width="135" height="16" rx="4" fill="#581C87"/>
-      <rect x="145" y="2" width="135" height="16" rx="4" fill="#8B5CF6"/>
-      <text x="152" y="14" class="font-mono" font-size="9.5" fill="#FFFFFF" font-weight="700">FASTAPI DEPLOYED</text>
-    </g>
+      <!-- Line 2 -->
+      <text x="0" y="20" class="font-mono code-txt"><tspan fill="#F43F5E">class</tspan> <tspan fill="#F59E0B">Mission</tspan>:</text>
 
-    <!-- Command Box -->
-    <g transform="translate(18, 165)">
-      <rect width="279" height="34" rx="6" fill="#0B1120" stroke="#1E293B"/>
-      <text x="12" y="21" class="font-mono" font-size="11" fill="#38BDF8">&gt; nexus.deploy()</text>
-      <text x="145" y="21" class="font-mono" font-size="11" fill="#34D399">[SUCCESS]</text>
-      <rect x="228" y="11" width="7" height="14" fill="#F8FAFC" class="blink-cursor"/>
+      <!-- Line 3 -->
+      <text x="0" y="36" class="font-mono code-txt">  <tspan fill="#F43F5E">def</tspan> <tspan fill="#60A5FA">__init__</tspan>(self):</text>
+
+      <!-- Line 4 -->
+      <text x="0" y="52" class="font-mono code-txt">    self.goal = <tspan fill="#34D399">"Make developers"</tspan></text>
+      <text x="0" y="68" class="font-mono code-txt">    <tspan fill="#34D399">"10x more productive"</tspan></text>
+
+      <!-- Line 5 -->
+      <text x="0" y="92" class="font-mono code-txt">  <tspan fill="#F43F5E">def</tspan> <tspan fill="#60A5FA">execute</tspan>(self):</text>
+
+      <!-- Line 6 -->
+      <text x="0" y="108" class="font-mono code-txt">    <tspan fill="#F43F5E">return</tspan> build(intelligence=<tspan fill="#A78BFA">True</tspan>)</text>
+
+      <!-- Line 7 -->
+      <text x="0" y="132" class="font-mono code-txt">mission = Mission()</text>
+
+      <!-- Line 8 -->
+      <text x="0" y="148" class="font-mono code-txt">mission.execute()</text>
     </g>
   </g>
+
+  <!-- ==================== FLOATING TECH ICONS (FAR RIGHT) ==================== -->
+  <g transform="translate(900, 30)">
+    <!-- Python Icon -->
+    <g transform="translate(0, 0)">
+      <circle cx="16" cy="16" r="15" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+      <path d="M 16 7 C 11 7 10 9 10 11 L 10 13 L 16 13 L 16 14 L 8 14 C 6 14 5 16 5 19 C 5 22 7 24 10 24 L 12 24 L 12 22 C 12 20 14 18 16 18 L 20 18 C 22 18 23 17 23 15 L 23 11 C 23 9 21 7 16 7 Z" fill="#38BDF8"/>
+    </g>
+
+    <!-- React Icon -->
+    <g transform="translate(0, 48)">
+      <circle cx="16" cy="16" r="15" fill="#0F172A" stroke="#00F0FF" stroke-width="1.5"/>
+      <ellipse cx="16" cy="16" rx="9" ry="3.5" fill="none" stroke="#00F0FF" stroke-width="1"/>
+      <ellipse cx="16" cy="16" rx="9" ry="3.5" fill="none" stroke="#00F0FF" stroke-width="1" transform="rotate(60 16 16)"/>
+      <ellipse cx="16" cy="16" rx="9" ry="3.5" fill="none" stroke="#00F0FF" stroke-width="1" transform="rotate(120 16 16)"/>
+      <circle cx="16" cy="16" r="2" fill="#00F0FF"/>
+    </g>
+
+    <!-- FastAPI Icon -->
+    <g transform="translate(0, 96)">
+      <circle cx="16" cy="16" r="15" fill="#0F172A" stroke="#34D399" stroke-width="1.5"/>
+      <path d="M 17 6 L 9 17 L 15 17 L 14 26 L 23 14 L 17 14 Z" fill="#34D399"/>
+    </g>
+
+    <!-- LangChain Icon (Parrot silhouette) -->
+    <g transform="translate(0, 144)">
+      <circle cx="16" cy="16" r="15" fill="#0F172A" stroke="#A78BFA" stroke-width="1.5"/>
+      <path d="M 12 8 C 16 8 20 10 21 14 C 22 17 20 22 16 24 C 14 24 13 22 13 20 L 11 15 Z" fill="#A78BFA"/>
+      <circle cx="15" cy="11" r="1.5" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Docker Icon -->
+    <g transform="translate(0, 192)">
+      <circle cx="16" cy="16" r="15" fill="#0F172A" stroke="#60A5FA" stroke-width="1.5"/>
+      <rect x="8" y="14" width="3" height="3" fill="#60A5FA"/>
+      <rect x="12" y="14" width="3" height="3" fill="#60A5FA"/>
+      <rect x="16" y="14" width="3" height="3" fill="#60A5FA"/>
+      <rect x="12" y="10" width="3" height="3" fill="#60A5FA"/>
+      <rect x="16" y="10" width="3" height="3" fill="#60A5FA"/>
+      <path d="M 6 18 C 6 22 12 24 17 24 C 23 24 25 21 26 18 Z" fill="#60A5FA"/>
+    </g>
+
+    <!-- GitHub Icon -->
+    <g transform="translate(0, 240)">
+      <circle cx="16" cy="16" r="15" fill="#0F172A" stroke="#F8FAFC" stroke-width="1.5"/>
+      <path d="M16 7C11.03 7 7 11.03 7 16c0 3.98 2.58 7.35 6.16 8.54.45.08.62-.2.62-.43v-1.53c-2.51.55-3.04-1.21-3.04-1.21-.41-1.04-1.01-1.32-1.01-1.32-.82-.56.06-.55.06-.55.9.06 1.38.93 1.38.93.8 1.38 2.11.98 2.62.75.08-.58.31-.98.57-1.2-2-.23-4.1-1-4.1-4.45 0-.98.35-1.79.93-2.42-.09-.23-.4-1.15.09-2.39 0 0 .76-.24 2.48.92.72-.2 1.49-.3 2.26-.3.77 0 1.54.1 2.26.3 1.72-1.17 2.48-.92 2.48-.92.49 1.24.18 2.16.09 2.39.58.63.93 1.44.93 2.42 0 3.46-2.1 4.22-4.11 4.44.32.28.61.83.61 1.67v2.48c0 .24.16.52.63.43C22.43 23.35 25 19.98 25 16c0-4.97-4.03-9-9-9z" fill="#F8FAFC"/>
+    </g>
+  </g>
+
 </svg>
